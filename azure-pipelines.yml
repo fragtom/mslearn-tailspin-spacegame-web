@@ -38,6 +38,9 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
 
+- task: WhiteSource Bolt@20
+  displayName: 'Run WhiteSource Bolt'
+
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
